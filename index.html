@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculatrice Scientifique</title>
+    <title>Calculatrice</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -11,13 +11,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #333;
+            background: #001b18;
             margin: 0;
             flex-direction: column;
         }
         .calculator {
             width: 350px;
-            background: #222;
+            background: #00796b;
             border-radius: 20px;
             padding: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -38,7 +38,7 @@
         .buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            gap: 10px;
         }
         button {
             background: #444;
@@ -61,6 +61,15 @@
         }
         .equal {
             background: #FF9500;
+            width: 100%;
+            margin-top: 8px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 50px;
+        }
+        .equal:hover {
+            background: #dfb26f;
+            
         }
         .function {
             background: #4A90E2;
@@ -111,14 +120,13 @@
 
         <button onclick="appendToDisplay('0')">0</button>
         <button onclick="appendToDisplay('.')">.</button>
-        <button class="equal" onclick="calculate()">=</button>
+        <button onclick="appendToDisplay('00')">00</button>
+        
         <button onclick="appendToDisplay('^')">^</button>
 
-        <button class="function" onclick="appendToDisplay('Math.sin(')">sin</button>
-        <button class="function" onclick="appendToDisplay('Math.cos(')">cos</button>
-        <button class="function" onclick="appendToDisplay('Math.tan(')">tan</button>
-        <button class="function" onclick="appendToDisplay('Math.sqrt(')">√</button>
+        
     </div>
+    <button class="equal" onclick="calculate()">=</button>
 </div>
 
 <script>
